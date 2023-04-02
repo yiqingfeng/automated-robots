@@ -24,4 +24,12 @@ export class ReportMiddleware implements IMiddleware<Context, NextFunction> {
   static getName(): string {
     return 'report';
   }
+
+  // 执行忽略 - 非必要，默认所有路由都支持 | 正向的 还有 match 方法
+  // ignore(ctx: Context): boolean {
+  //   // 下面的路由将忽略此中间件
+  //   return (
+  //     ctx.path === '/' || ctx.path === '/api/auth' || ctx.path === '/api/login'
+  //   );
+  // }
 }

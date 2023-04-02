@@ -10,7 +10,11 @@
     "@midwayjs/info": "^3.0.0",
     "@midwayjs/koa": "^3.0.0",
     "@midwayjs/logger": "^2.14.0",
-    "@midwayjs/validate": "^3.0.0"
+    "@midwayjs/static-file": "^3.11.1",
+    "@midwayjs/swagger": "^3.11.1",
+    "@midwayjs/validate": "^3.0.0",
+    "@midwayjs/view-nunjucks": "^3.10.15",
+    "swagger-ui-dist": "^4.18.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.5.0",
@@ -31,7 +35,8 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "start": "NODE_ENV=production node ./bootstrap.js",
+    "start": "npm run dev",
+    "serve": "NODE_ENV=production node ./bootstrap.js",
     "dev": "cross-env NODE_ENV=local midway-bin dev --ts",
     "test": "midway-bin test --ts",
     "cov": "midway-bin cov --ts",
