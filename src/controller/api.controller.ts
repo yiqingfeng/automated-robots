@@ -15,4 +15,10 @@ export class APIController {
     const user = await this.userService.getUser({ uid });
     return { success: true, message: 'OK', data: user };
   }
+
+  @Get('/get_user_list')
+  async getUserList() {
+    const user = await this.userService.getUserList().catch(() => []);
+    return { success: true, message: 'OK', data: user };
+  }
 }

@@ -1,5 +1,6 @@
 import { Provide } from '@midwayjs/core';
 import { IUserOptions } from '../interface';
+import { readCsv } from '../util/csv';
 
 @Provide()
 export class UserService {
@@ -10,5 +11,9 @@ export class UserService {
       phone: '12345678901',
       email: 'xxx.xxx@xxx.com',
     };
+  }
+
+  async getUserList(): Promise<any[]> {
+    return await readCsv('user');
   }
 }
